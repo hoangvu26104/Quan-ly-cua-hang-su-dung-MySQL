@@ -487,7 +487,11 @@ class Ui_Dialog(object):
 
 
 if __name__ == "__main__":
-    import sys
+    import sys, os
+    from dotenv import load_dotenv
+    load_dotenv()
+    host=os.getenv("host")
+    print(host)
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
     ui = Ui_Dialog("monorail.proxy.rlwy.net", "root", "xIbazQgoTOmqlVFBFVpELtNnscUXRTfq", "railway", "45681")
